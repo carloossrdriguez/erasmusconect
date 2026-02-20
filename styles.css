@@ -175,48 +175,47 @@ nav a.active {
 .search-container,
 .search-strip,
 .forum-search-box {
-    background: white !important;
-    padding: 8px !important;
-    border-radius: 50px !important;
-    display: flex !important;
-    flex-direction: row !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    background: white;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin: 20px auto !important;
-    align-items: center !important;
-    width: 90%;
+    margin: 20px auto;
+    align-items: center;
 }
 
 .search-container input,
 .search-strip input,
 .forum-search-box input {
     flex: 1;
-    border: none !important;
-    padding: 12px 20px !important;
-    font-size: 1rem !important;
-    outline: none !important;
-    background: transparent !important;
-    border-radius: 50px 0 0 50px !important;
-    color: #333 !important;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    outline: none;
+    background: transparent;
+    border-radius: 50px 0 0 50px;
+    color: #333;
 }
 
 .search-container button,
 .search-strip button,
 .forum-search-box button {
-    background: var(--us-red) !important;
-    color: white !important;
-    border: none !important;
-    padding: 10px 25px !important;
-    border-radius: 50px !important;
-    cursor: pointer !important;
-    font-weight: bold !important;
-    transition: var(--transition) !important;
+    background: var(--us-red);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
 }
 
 .search-container button:hover,
 .search-strip button:hover,
 .forum-search-box button:hover {
-    background: #800d28 !important;
+    background: #800d28;
 }
 
 /* Sticky Search Sections Fix */
