@@ -21,6 +21,18 @@ body {
     background-color: var(--us-light);
     color: var(--us-dark);
     line-height: 1.6;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+    overflow-wrap: break-word;
+    /* Prevent text overlap */
+    word-wrap: break-word;
 }
 
 /* Header */
@@ -37,10 +49,18 @@ header {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
+    /* Increased padding for better margins */
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Page titles and sections alignment helper */
+.section-container {
+    padding: 20px 40px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .logo {

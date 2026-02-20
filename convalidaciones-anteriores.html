@@ -26,7 +26,8 @@
             border-radius: 50px;
             overflow: hidden;
             border: 2px solid var(--us-red);
-            max-width: 1200px;
+            max-width: 100%;
+            /* Wider search bar */
             margin: 0 auto;
             background: white;
         }
@@ -85,16 +86,22 @@
         }
 
         .destination-name {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            /* Slightly smaller to prevent overlap */
             font-weight: bold;
             color: var(--us-red);
             margin: 0;
+            flex: 1;
+            /* Allow it to grow/shrink */
+            padding-right: 20px;
         }
 
         .destination-icon {
             color: var(--us-gold);
             font-size: 1.5rem;
             transition: var(--transition);
+            flex-shrink: 0;
+            /* Don't squash icon */
         }
 
         .destination-strip:hover .destination-icon {
@@ -125,9 +132,11 @@
         }
 
         .container-full {
-            max-width: 1200px;
+            max-width: 100% !important;
+            /* Full width */
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 5%;
+            /* Generous side margins */
         }
 
         .no-results {
