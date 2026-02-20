@@ -7,15 +7,183 @@
     <title>Convalidaciones Anteriores - erasmusconect</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <style>
+        .search-section {
+            width: 100%;
+            padding: 40px 0;
+            background: #fdfdfd;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 70px;
+            z-index: 10;
+        }
+
+        .search-strip {
+            display: flex;
+            gap: 0;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            border-radius: 50px;
+            overflow: hidden;
+            border: 2px solid var(--us-red);
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .search-strip input {
+            flex: 1;
+            border: none;
+            padding: 20px 30px;
+            font-size: 1.2rem;
+            outline: none;
+        }
+
+        .search-strip button {
+            background: var(--us-red);
+            color: white;
+            border: none;
+            padding: 0 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-strip button:hover {
+            background: #7a0000;
+        }
+
+        .destinations-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-bottom: 50px;
+        }
+
+        .destination-strip {
+            background: var(--white);
+            border-left: 10px solid var(--us-red);
+            padding: 25px 40px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+        }
+
+        .destination-strip:hover {
+            transform: scale(1.005);
+            border-left-color: var(--us-gold);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .destination-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--us-red);
+            margin: 0;
+        }
+
+        .destination-icon {
+            color: var(--us-gold);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .destination-strip:hover .destination-icon {
+            transform: translateX(10px);
+        }
+
+        .page-header {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 5px solid var(--us-gold);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--us-red);
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--us-gold);
+            transform: translateX(-5px);
+        }
+
+        .container-full {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 50px;
+            color: #888;
+            font-size: 1.2rem;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .search-section {
+                top: 60px;
+                padding: 20px 0;
+            }
+
+            .search-strip {
+                flex-direction: column;
+                border-radius: 15px;
+            }
+
+            .search-strip input {
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+            }
+
+            .search-strip button {
+                width: 100%;
+                padding: 15px;
+                justify-content: center;
+            }
+
+            .destination-strip {
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .container-full {
+                padding: 0 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header><div class="container"><a href="index.html" class="logo">
+    <header>
+        <div class="container"><a href="index.html" class="logo">
                 <i class="fas fa-university"></i>
                 Erasmus Connect <span>Universidad de Sevilla</span>
             </a>
-            <input type="checkbox" id="nav-check"><label for="nav-check" class="menu-toggle"><span></span><span></span><span></span></label><nav>
+            <input type="checkbox" id="nav-check"><label for="nav-check"
+                class="menu-toggle"><span></span><span></span><span></span></label>
+            <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="destinos.html">Destinos</a></li>
@@ -615,6 +783,3 @@
 </body>
 
 </html>
-
-
-
