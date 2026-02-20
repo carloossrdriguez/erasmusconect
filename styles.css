@@ -171,32 +171,101 @@ nav a.active {
     margin-right: auto;
 }
 
-.search-container {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+/* Global Search Bar Styles */
+.search-container,
+.search-strip,
+.forum-search-box {
+    background: white !important;
+    padding: 8px !important;
+    border-radius: 50px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    max-width: 800px;
+    margin: 20px auto !important;
+    align-items: center !important;
+    width: 90%;
 }
 
-@media (max-width: 480px) {
-    .search-container {
-        flex-direction: column;
+.search-container input,
+.search-strip input,
+.forum-search-box input {
+    flex: 1;
+    border: none !important;
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
+    outline: none !important;
+    background: transparent !important;
+    border-radius: 50px 0 0 50px !important;
+    color: #333 !important;
+}
+
+.search-container button,
+.search-strip button,
+.forum-search-box button {
+    background: var(--us-red) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 25px !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    font-weight: bold !important;
+    transition: var(--transition) !important;
+}
+
+.search-container button:hover,
+.search-strip button:hover,
+.forum-search-box button:hover {
+    background: #800d28 !important;
+}
+
+/* Sticky Search Sections Fix */
+.forum-search-section,
+.search-section {
+    background: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 55px;
+    /* Exact offset for our sticky header */
+    z-index: 99;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+
+    .search-container,
+    .search-strip,
+    .forum-search-box {
+        flex-direction: column !important;
+        border-radius: 15px !important;
+        padding: 10px !important;
+        width: 95%;
     }
 
     .search-container input,
-    .search-container .btn {
-        width: 100%;
+    .search-strip input,
+    .forum-search-box input {
+        width: 100% !important;
+        border-radius: 10px !important;
+        padding: 12px !important;
+        text-align: center !important;
+        margin-bottom: 5px;
     }
-}
 
-.search-container input {
-    flex: 1;
-    padding: 15px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    .search-container button,
+    .search-strip button,
+    .forum-search-box button {
+        width: 100% !important;
+        border-radius: 10px !important;
+        padding: 12px !important;
+    }
+
+    .forum-search-section,
+    .search-section {
+        top: 50px;
+        padding: 10px 0;
+    }
 }
 
 .btn {
