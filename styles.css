@@ -171,106 +171,16 @@ nav a.active {
     margin-right: auto;
 }
 
-/* Global Search Bar Styles */
-.search-container,
-.search-strip,
-.forum-search-box {
-    background: white;
-    padding: 8px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: row;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* Search Bars */
+.search-wrapper {
     max-width: 800px;
     margin: 20px auto;
-    align-items: center;
 }
 
-.search-container input,
-.search-strip input,
-.forum-search-box input {
-    flex: 1;
-    border: none;
-    padding: 12px 20px;
-    font-size: 1rem;
-    outline: none;
-    background: transparent;
-    border-radius: 50px 0 0 50px;
-    color: #333;
-}
-
-.search-container button,
-.search-strip button,
-.forum-search-box button {
-    background: var(--us-red);
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: var(--transition);
-}
-
-/* Sticky Search Sections Fix */
-.forum-search-section,
-.search-section {
-    background: white;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 55px;
-    /* Exact offset for our sticky header */
-    z-index: 99;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* Sticky Search Sections Fix */
-.forum-search-section,
-.search-section {
-    background: white;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 55px;
-    /* Exact offset for our sticky header */
-    z-index: 99;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
+/* Mobile-only adjustments */
 @media (max-width: 768px) {
-
-    .search-container,
-    .search-strip,
-    .forum-search-box {
-        flex-direction: column !important;
-        border-radius: 15px !important;
-        padding: 10px !important;
-        width: 95% !important;
-    }
-
-    .search-container input,
-    .search-strip input,
-    .forum-search-box input {
-        width: 100% !important;
-        border-radius: 10px !important;
-        padding: 12px !important;
-        text-align: center !important;
-        margin-bottom: 5px;
-    }
-
-    .search-container button,
-    .search-strip button,
-    .forum-search-box button {
-        width: 100% !important;
-        border-radius: 10px !important;
-        padding: 12px !important;
-    }
-
-    .forum-search-section,
-    .search-section {
-        top: 50px;
-        padding: 10px 0;
+    header .container {
+        padding: 0 15px;
     }
 }
 
