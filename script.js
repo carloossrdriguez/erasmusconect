@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('ErasmusConect initialized');
+    console.log('erasmusconect initialized');
 
     // Simple search interaction mock
     const searchBtn = document.querySelector('.search-container button');
